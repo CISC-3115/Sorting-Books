@@ -1,0 +1,14 @@
+In Search of Lost Time,Marcel Proust,3.8
+Ulysses,James Joyce,4.6
+War and Peace,Leo Tolstoy,4.3
+The Brothers Karamazov,Fyodor Dostoyevsky,4.9
+Beloved,Toni Morrison,4.5
+Pride and Prejudice,Jane Austen,3.7
+The Odyssey,Homer,4.7
+The Catcher in the Rye,J. D. Salinger,3.3
+To the Lighthouse,Virginia Woolf,4.0
+Heart of Darkness,Joseph Conrad,3.6
+For Whom the Bell Tolls,Ernest Hemingway
+The Metamorphosis,Franz Kafka,3.4,10.00
+Nineteen Eighty Four,George Orwell,4.2
+Frankenstein,Mary Shelley,four
