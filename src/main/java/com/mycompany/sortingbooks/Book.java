@@ -11,7 +11,6 @@ class Book {
     String title;
     String author;
     double rating;
-    ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(String title, String author, double rating) {
         this.title = title;
@@ -20,51 +19,10 @@ class Book {
 
     }
 
-    public Book() {
-        bookList = new ArrayList<>();
-
-    }
-
-    public void sort(Comparator x) {
-        bookList.sort(x);
-
-        for (Book book : bookList) {
-            System.out.println(book);
-        }
-    }
-
-    public void populate(String name) throws FileNotFoundException {
-
-        Scanner sc = new Scanner(new File(name));
-        while (sc.hasNext()) {
-
-            try {
-                String x = sc.nextLine();
-                String[] split = x.split(",");
-
-                String names[] = split[1].split(" ");
-
-                if (split.length != 3 || names.length != 2) {
-
-                    throw new Exception();
-                } else {
-
-                    bookList.add(new Book(split[0], split[1], Double.parseDouble(split[2])));
-
-                }
-
-            } catch (Exception e) {
-
-            }
-        }
-
-    }
-
     public String getTitle() {
 
         return title;
     }
-
 
     public String getAuthor() {
 
@@ -79,8 +37,26 @@ class Book {
 
     @Override
     public String toString() {
-
+        System.out.println(this);
         return String.format("%-33s%-33s%-33s", title, author, rating);
+
+    }
+
+    public static String checkExists(Scanner sr) {
+
+        System.out.print("Books file: ");
+        String check = sr.next();
+        File r = new File(check);
+
+        while (!r.exists()) {
+            System.out.println("File does not exist; try again");
+            System.out.print("Books file: ");
+            check = sr.next();
+            r = new File(check);
+
+        }
+
+        return check;
 
     }
 
